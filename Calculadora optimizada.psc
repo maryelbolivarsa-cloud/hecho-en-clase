@@ -4,22 +4,35 @@ Algoritmo Calculadora
 	Leer opera
 	Escribir "Cantidad de Números a operar" 
 	leer cantidad
-	operacion<- 0 
 	para i <- 1 hasta cantidad hacer 
 		Escribir "Digite un número"
 		leer numero
 		Si Opera=1
+			operacion<- 0 
 			operacion<- operacion + numero 
 		FinSi
 		Si Opera =2
+			si operacion<- 0 Entonces
+				operacion<- numero
+			SiNo 
 			operacion<- operacion - numero 
 		FinSi
-		Si Opera=3
+	FinSi
+	Si Opera=3
+		si operacion<- 0 Entonces
+			operacion<- numero
+		SiNo 
 			operacion<- operacion * numero
 		FinSi
+	FinSi
 		Si Opera =4
-			operacion<- operacion * numero
+			si operacion<- 0 Entonces
+				operacion<- numero
+			SiNo 
+			operacion<- operacion / numero
 		FinSi
+	FinSi
+	
 	FinPara
 	escribir "La operacion es: ",operacion 
 FinAlgoritmo
